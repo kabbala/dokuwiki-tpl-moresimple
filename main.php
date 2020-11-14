@@ -1,32 +1,34 @@
 <?php
 
 /* based on bs4simple by Kijima Daigo */
- 
+
 $hasSidebar = page_findnearest($conf['sidebar']);
 $showSidebar = $hasSidebar && ($ACT=='show');
 ?>
 
 <!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
-    <head>
-	<meta charset="utf-8" />
-	<title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
-	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<?php tpl_metaheaders() ?>
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<?php echo tpl_favicon(array('favicon', 'mobile')) ?>
-	<?php tpl_includeFile('meta.html') ?>
-    </head>
+<head>
+<meta charset="utf-8" />
+<title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<?php tpl_metaheaders() ?>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<?php echo tpl_favicon(array('favicon', 'mobile')) ?>
+<?php tpl_includeFile('meta.html') ?>
+</head>
 
-    <body>
-	<?php if($ID == 'start'): ?>
-	    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php
-												      echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
-	<?php else: ?>
-		<div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?>">
-	<?php endif; ?><!-- /start -->
+<body>
+<?php if($ID == $conf['start']): ?>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
+<?php else: ?>
+<!--    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?>">  -->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
+<?php endif; ?>
+
+    <!-- /start -->
 
         <?php include('tpl_header.php') ?>
 	<div class="wrapper group">
