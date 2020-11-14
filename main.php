@@ -65,7 +65,8 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 				<!-- wikipage stop -->
 				<?php tpl_includeFile('pagefooter.html') ?>
 
-				<small><div class="docInfo text-right text-secondary"><?php tpl_pageinfo() ?></div></small>
+                <!-- will not use tpl_pageinfo()  -->
+                <small><div class="docInfo text-right text-secondary"><?php echo $lang['lastmod'],' ',dformat($INFO['lastmod']);?></div></small>
 			    </div>
 
 			    <?php tpl_flush() ?>
