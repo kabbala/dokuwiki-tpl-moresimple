@@ -1,0 +1,7 @@
+base     moresimple
+author   My Full Name
+email    me@example.com
+date     2020-11-14
+name     moreSimple
+desc     This is just an Example of how a template description looks like
+url      https://github.com/kabbala/dokuwiki-tpl-moresimple
