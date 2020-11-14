@@ -30,7 +30,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 
 			    <?php if($showSidebar): ?>
 				<!-- ********** ASIDE ********** -->
-				<div id="dokuwiki__aside"><div class="pad aside include group shadow p-4">
+				<div id="dokuwiki__aside"><div class="pad aside include group p-4">
 				    <h3 class="toggle"><?php echo $lang['sidebar'] ?></h3>
 				    <div class="content"><div class="group">
 					<?php tpl_flush() ?>
