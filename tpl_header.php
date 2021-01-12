@@ -94,7 +94,9 @@ if (!defined('DOKU_INC')) die();
 			</div>
 		    </form>
 		</li>
-
+	    </ul>
+	</div>
+</nav>
 		<!-- BREADCRUMBS -->
 		<?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
 		    <!-- <div class="breadcrumbs">
@@ -108,8 +110,7 @@ if (!defined('DOKU_INC')) die();
 		<?php endif ?>
 
 		<hr class="a11y" />
-	    </ul>
-	</div>
+
 	<!-- /start -->
-</nav>
+
 <!-- /header -->
